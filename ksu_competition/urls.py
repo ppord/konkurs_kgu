@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from competition.views import TextIdeaList
+
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^ideas/', TextIdeaList.as_view())
 ]

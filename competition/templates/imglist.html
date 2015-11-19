@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
+<h1>Идеи:</h1>
+    <ul>
+        {% for idea in idealist %}
+            <li>{{ idea.author }}<br />
+                {{ idea.date }}<br />
+                {{ idea.text }}<br />
+            </li>
+        {% endfor %}
 
-</body>
-</html>
+    </ul>
+{% endblock %}
